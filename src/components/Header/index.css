@@ -1,0 +1,64 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  background-color: #f8ffe6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0077b6;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.logo-text {
+  margin-left: 8px;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  color: #0077b6;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.link-text {
+  margin-left: 6px;
+}
+
+/* 🔽 MOBILE VIEW STYLING */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 30px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  /* ✅ Hide text next to icons on mobile */
+  .link-text {
+    display: none;
+  }
+}

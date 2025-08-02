@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-function App() {
+// Component Imports
+import Home from './components/Home'
+import DoctorsList from './components/DoctorsList'
+import DoctorDetails from './components/DoctorDetails'
+import Appointment from './components/Appointment'
+import Confirmation from './components/Confirmation'
+import NotFound from './components/NotFound'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>healthcare-appointment-booking-app\src\components\Appointment
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/doctors" element={<DoctorsList />} />
+        <Route path="/doctors/:id" element={<DoctorDetails />} />
+        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+export default App
